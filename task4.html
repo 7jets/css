@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{display: block;margin: 0 auto}
+        #outer{
+            width: 330px;
+            height: 100px;
+            margin: 10px auto;
+        }
+        #outer div{
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 0 5px;
+            background:black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementsByTagName("button")[0];
+            var oDiv = document.getElementById("outer").getElementsByTagName("div");
+            oBtn.onclick = function () {
+                for(var i = 0; i < oDiv.length; i++){
+                    oDiv[i].style.backgroundColor = "red";
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<button>变色</button>
+<div id="outer">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
